@@ -1,0 +1,14 @@
+# Ignore everything by default
+*
+
+# Allow only essential files
+!*.swift
+!*.xcodeproj/
+!*.xcworkspace/
+!*.plist
+!*.entitlements
+!Assets.xcassets/
+!*.json
+
+# Ensure .gitignore is tracked
+!.gitignore
