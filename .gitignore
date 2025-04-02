@@ -1,7 +1,14 @@
-# Ignore everything by default
-*
+# Ignore unnecessary files
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.lock
+Pods/
+.swiftpm/
 
-# Allow only essential files
+# Allow essential files
 !*.swift
 !*.xcodeproj/
 !*.xcworkspace/
