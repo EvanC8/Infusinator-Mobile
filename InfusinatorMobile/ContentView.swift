@@ -7,15 +7,18 @@
 
 import SwiftUI
 
+enum Page {
+    case main
+    case myMeds
+    case settings
+    case history
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
         }
-        .padding()
     }
 }
 

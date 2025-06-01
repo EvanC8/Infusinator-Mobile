@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct InfusinatorMobileApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(for: [
+                    Injection.self,
+                    Treatment.self,
+                    User.self
+                ])
         }
     }
 }
