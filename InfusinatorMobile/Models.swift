@@ -15,13 +15,13 @@ class User {
     var name: String
     
     var stars: Int
-    var primaryPlanID: UUID
+    var primaryTreatmentID: UUID
     
-    init(name: String, stars: Int, primaryPlanID: UUID) {
+    init(name: String, stars: Int, primaryTreatmentID: UUID) {
         self.id = UUID()
         self.name = name
         self.stars = stars
-        self.primaryPlanID = primaryPlanID
+        self.primaryTreatmentID = primaryTreatmentID
     }
     
 }
@@ -31,17 +31,17 @@ class User {
 class Treatment {
     var id: UUID
     
-    var medicationName: String
+    var name: String
     var dose: Double
-    var units: String
+    var unit: String
     
     var color: Int
     
-    init(medicationName: String, dose: Double, units: String, color: Int) {
+    init(name: String, dose: Double, unit: String, color: Int) {
         self.id = UUID()
-        self.medicationName = medicationName
+        self.name = name
         self.dose = dose
-        self.units = units
+        self.unit = unit
         self.color = color
     }
 }
@@ -51,13 +51,13 @@ class Injection {
     var id: UUID
     
     var date: Date
-    var treatment: Treatment
+    var treatmentID: UUID
     var comment: String
     
-    init(date: Date, treatment: Treatment, comment: String) {
+    init(date: Date, treatmentID: UUID, comment: String) {
         self.id = UUID()
         self.date = date
-        self.treatment = treatment
+        self.treatmentID = treatmentID
         self.comment = comment
     }
 }
