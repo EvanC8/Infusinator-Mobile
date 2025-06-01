@@ -26,8 +26,8 @@ struct ContentView: View {
     @State var page: Page = .main
     
     var body: some View {
-        if page == .main {
-            MainView(page: $page)
+        if users.isEmpty {
+            Text("Loading data...")
                 .onAppear {
                     if users.isEmpty {
                         let treatment = Treatment(name: "Advate", dose: 3600, unit: "mg", color: 0)
@@ -39,6 +39,13 @@ struct ContentView: View {
                         ModelManager.addInjection(context, injection)
                     }
                 }
+        }
+        else {
+            if let user = users.first {
+                if page == .main {
+                    MainView(page: $page, user: user)
+                }
+            }
         }
     }
 }
